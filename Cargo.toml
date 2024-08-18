@@ -4,3 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+prost = "0.8"
+prost-types = "0.8"
+tokio = { version = "1", features = ["full"] }
+tch = "0.5.0"
+
+[build-dependencies]
+prost-build = "0.8"

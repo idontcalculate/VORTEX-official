@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package vortex;
+
+// Represents a complete VORTEX model
+message VortexModel {
+  string name = 1;
+  int32 version = 2;
+  repeated VortexLayer layers = 3;
+}
+
+// Represents a single layer in the VORTEX model
+message VortexLayer {
+  string name = 1;
+  string type = 2;
+  int32 input_dim = 3;
+  int32 output_dim = 4;
+  repeated float weights = 5;
+  repeated float biases = 6;
+}
