@@ -1,5 +1,6 @@
 
-# Library Engine:
+framework for neural networks, vector database loaders, and features for information retrieval 
+
 ## VORTEX
 
 ## 🚀 Rust-Powered Neural Networks
