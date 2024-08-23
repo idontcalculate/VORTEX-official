@@ -4,16 +4,13 @@
 
 ## Key Features
 
-- **Efficient Model Conversion**: Seamlessly convert models from various formats to the VORTEX format, ensuring compatibility and optimal performance.
-- **Serialization**: Compact and efficient serialization for easy storage and deployment of models.
-- **Custom Tensor Support**: Handle custom tensor structures, making the library flexible for specialized models.
-- **Version Control**: Simplified management of model versions, ensuring that updates and iterations are tracked effectively.
+- The `.vortex` format can act as a container to store not just model weights but also metadata, configuration, or other elements relevant to your use case.
+- If your deployment process or target environment requires a specific structure that isn’t covered by standard formats, the `.vortex` format can encapsulate your model and its associated data in a way that fits those needs.-
+- The `.vortex` format includes custom versioning or tagging to help manage different versions of your models in a structured manner.
 
 ## Installation
 
 To get started with VORTEX-Official, ensure Rust is installed on your system. Then, clone the repository and build the project using Cargo, Rust’s package manager. This straightforward setup ensures that you can quickly integrate VORTEX-Official into your workflow.
-
-## Usage Overview
 
 ### Model Conversion
 
