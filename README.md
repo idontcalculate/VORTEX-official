@@ -1,27 +1,50 @@
 
-framework for neural networks, vector database loaders, and features for information retrieval 
+## VORTEX-Official
+VORTEX-Official is a Rust-based library designed to convert machine learning models into a highly efficient and portable VORTEX format. 
+This format enables easy deployment and integration across various systems, ensuring that model structures and metadata are preserved 
+without necessarily including raw weights and biases or using wrapper methods, and the models lightweight for deployment.
 
-## VORTEX
 
-## 🚀 Rust-Powered Neural Networks
+Features
+Model Conversion: Convert models from various formats into the VORTEX format.
+Serialization: Efficiently serialize models for storage and deployment.
+Custom Tensor Handling: Supports custom tensor structures for specialized models.
+Versioning Support: Easily manage different versions of models.
+Installation
+Ensure you have Rust installed. Then, clone the repository and build the project:
 
-VORTEX Format:
+bash
+git clone https://github.com/yourusername/VORTEX-official.git
+cd VORTEX-official
+cargo build --release
 
-A custom binary format for neural networks, storing models and allowing manipulation on binary level
+Usage
+Converting a Model
+Prepare your model: Ensure your model is saved in a compatible format (e.g., PyTorch checkpoint).
+Conversion: Use the provided convert_to_vortex function to convert your model.
 
-Rust-Based Tensors:
+rust
 
-I built a Tensor structure in Rust:: It’s lean, mean, and ready to process neural networks natively.
+use vortex_official::{convert_to_vortex};
 
-What’s Next?
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    convert_to_vortex("model_name", "path_to_model", "output_dir", 1)?;
+    Ok(())
+}
+This will create a .vortex file in the specified output directory.
 
-Expand VORTEX:
+File Structure
+src/
+main.rs: Entry point for the application.
+convert_to_vortex.rs: Core logic for model conversion.
+vortex_model.rs: Defines the VortexModel and VortexLayer structs.
+config.rs: Handles configuration loading.
+assets/: Stores the converted .vortex models.
+Versioning
+Model versions are managed within the .vortex file name and stored in the assets/ directory. When updating a model, increment the version number to keep track of changes.
 
-More layers, more features, more power. We’re making VORTEX the ultimate format for neural networks.
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
-New Algorithms in Rust:
-
-Write algorithms directly in Rust, optimized for performance.
-Tools and Ecosystem:
-
-Building a suite of tools for VORTEX models—conversion, inspection, modification, all open-source.
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
