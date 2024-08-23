@@ -13,10 +13,6 @@ Versioning Support: Easily manage different versions of models.
 Installation
 Ensure you have Rust installed. Then, clone the repository and build the project:
 
-bash
-git clone https://github.com/yourusername/VORTEX-official.git
-cd VORTEX-official
-cargo build --release
 
 Usage
 Converting a Model
